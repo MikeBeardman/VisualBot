@@ -1,0 +1,3 @@
+C:\Users\meller\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Michael Eller\MiVisualBot\1.0\\VisualBot.dll
+C:\Users\meller\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Michael Eller\MiVisualBot\1.0\\extension.vsixmanifest
+C:\Users\meller\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Michael Eller\MiVisualBot\1.0\\VisualBot.pdb
