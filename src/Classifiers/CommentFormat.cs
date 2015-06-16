@@ -1,10 +1,9 @@
 ﻿using System.ComponentModel.Composition;
-using System.Windows;
 using System.Windows.Media;
 using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Utilities;
 
-namespace VisualBot
+namespace VisualBot.Classifiers
 {
     #region Format definition
 
@@ -13,22 +12,22 @@ namespace VisualBot
     /// and is underlined.
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = "Variable")]
+    [ClassificationType(ClassificationTypeNames = "Comment")]
     [Name(Name)]
     [UserVisible(true)]
-    [Order(Before = Priority.Default)]
-    internal sealed class VariableFormat : ClassificationFormatDefinition
+    [Order(Before = VariableFormat.Name)]
+    internal sealed class CommentFormat : ClassificationFormatDefinition
     {
-        public const string Name = "VariableFormat";
+        public const string Name = "CommentFormat";
 
         /// <summary>
         /// Defines the visual format for the "VisualBot" classification type
         /// </summary>
-        public VariableFormat()
+        public CommentFormat()
         {
             DisplayName = Name;
-            ForegroundColor = Colors.BlueViolet;
-            
+            ForegroundColor = Colors.ForestGreen;
+
         }
     }
 

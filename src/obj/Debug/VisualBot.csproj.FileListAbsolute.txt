@@ -14,3 +14,11 @@ C:\Dev\VisualBot\bin\Debug\VisualBot.vsix
 C:\Dev\VisualBot\bin\Debug\extension.vsixmanifest
 C:\Dev\VisualBot\obj\Debug\VisualBot.pdb
 C:\Dev\VisualBot\obj\Debug\extension.vsixmanifest
+C:\Dev\VisualBot\src\bin\Debug\VisualBot.dll
+C:\Dev\VisualBot\src\bin\Debug\VisualBot.pdb
+C:\Dev\VisualBot\src\bin\Debug\VisualBot.vsix
+C:\Dev\VisualBot\src\bin\Debug\extension.vsixmanifest
+C:\Dev\VisualBot\src\obj\Debug\VisualBot.csprojResolveAssemblyReference.cache
+C:\Dev\VisualBot\src\obj\Debug\VisualBot.dll
+C:\Dev\VisualBot\src\obj\Debug\VisualBot.pdb
+C:\Dev\VisualBot\src\obj\Debug\extension.vsixmanifest

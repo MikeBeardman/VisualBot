@@ -2,15 +2,15 @@
 using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Utilities;
 
-namespace VisualBot
+namespace VisualBot.Classifiers
 {
-    internal static class VariableClassificationDefinition
+    internal static class StringClassificationDefinition
     {
         /// <summary>
         /// Defines the "VisualBot" classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("Variable")]
-        internal static ClassificationTypeDefinition VariableType = null;
+        [Name(StringFormat.Name)]
+        internal static ClassificationTypeDefinition StringType = null;
     }
 }

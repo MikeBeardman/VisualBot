@@ -1,8 +1,0 @@
-c:\dev\VisualBot\VisualBot\bin\Debug\VisualBot.dll
-c:\dev\VisualBot\VisualBot\bin\Debug\VisualBot.pdb
-c:\dev\VisualBot\VisualBot\obj\Debug\VisualBot.csprojResolveAssemblyReference.cache
-c:\dev\VisualBot\VisualBot\obj\Debug\VisualBot.dll
-c:\dev\VisualBot\VisualBot\obj\Debug\VisualBot.pdb
-c:\dev\VisualBot\VisualBot\obj\Debug\extension.vsixmanifest
-c:\dev\VisualBot\VisualBot\bin\Debug\VisualBot.vsix
-c:\dev\VisualBot\VisualBot\bin\Debug\extension.vsixmanifest

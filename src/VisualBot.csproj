@@ -40,6 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.CoreUtility" />
+    <Reference Include="Microsoft.VisualStudio.Language.Intellisense, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.Text.Data" />
     <Reference Include="Microsoft.VisualStudio.Text.Logic" />
     <Reference Include="Microsoft.VisualStudio.Text.UI" />
@@ -57,10 +58,19 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classifiers\CommentClassifier.cs" />
+    <Compile Include="Classifiers\CommentFormat.cs" />
+    <Compile Include="Classifiers\CommentType.cs" />
     <Compile Include="Classifiers\RegexBasedClassifier.cs" />
-    <Compile Include="VariableFormat.cs" />
-    <Compile Include="VariableType.cs" />
-    <Compile Include="VariableClassifier.cs" />
+    <Compile Include="Classifiers\StringClassifier.cs" />
+    <Compile Include="Classifiers\StringFormat.cs" />
+    <Compile Include="Classifiers\StringType.cs" />
+    <Compile Include="Classifiers\VariableFormat.cs" />
+    <Compile Include="Classifiers\VariableType.cs" />
+    <Compile Include="Classifiers\VariableClassifier.cs" />
+    <Compile Include="Intellisense\ControllerProvider.cs" />
+    <Compile Include="Intellisense\IntellisenseController.cs" />
+    <Compile Include="Intellisense\QuickInfoSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

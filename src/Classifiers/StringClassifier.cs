@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Utilities;
-using VisualBot.Classifiers;
 
-namespace VisualBot
+namespace VisualBot.Classifiers
 {
     #region Provider definition
     /// <summary>
@@ -16,7 +14,7 @@ namespace VisualBot
     /// </summary>
     [Export(typeof(IClassifierProvider))]
     [ContentType("text")]
-    internal class VariableProvider : IClassifierProvider
+    internal class StringProvider : IClassifierProvider
     {
         /// <summary>
         /// Import the classification registry to be used for getting a reference
@@ -27,7 +25,7 @@ namespace VisualBot
 
         public IClassifier GetClassifier(ITextBuffer buffer)
         {
-            return buffer.Properties.GetOrCreateSingletonProperty(() => new VariableClassifier(ClassificationRegistry));
+            return buffer.Properties.GetOrCreateSingletonProperty(() => new StringClassifier(ClassificationRegistry));
         }
     }
     #endregion //provider def
@@ -36,19 +34,19 @@ namespace VisualBot
     /// <summary>
     /// Classifier that classifies all text as an instance of the OrinaryClassifierType
     /// </summary>
-    internal class VariableClassifier : RegexBasedClassifier
+    internal class StringClassifier : RegexBasedClassifier
     {
-        public VariableClassifier(IClassificationTypeRegistryService classificationRegistry)
+        public StringClassifier(IClassificationTypeRegistryService classificationRegistry)
             : base(classificationRegistry) { }
 
         public override string FormatterName
         {
-            get { return VariableFormat.Name; }
+            get { return StringFormat.Name; }
         }
 
-        public override IEnumerable<System.Text.RegularExpressions.Regex> Regexs
+        public override IEnumerable<Regex> Regexs
         {
-            get { yield return new Regex(@"\${.+}"); }
+            get { yield return new Regex(@"\s\s.*[^${.*}|\.\.\.\s+.*]"); }
         }
     }
     #endregion //Classifier
